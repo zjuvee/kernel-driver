@@ -1,0 +1,19 @@
+﻿  Building 'kernel-game' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\kernel-game.inf
+  Stamping [Version] section with DriverVer=10/12/2024,14.40.54.749
+  kernel-game.vcxproj -> D:\Repos\gamehacking\kernel-game\x64\Release\kernel-game.sys
+  Driver is 'Universal'.
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  D:\Repos\gamehacking\kernel-game\x64\Release\kernel-game\kernel-game.cat
+  Done Adding Additional Store
+  Successfully signed: D:\Repos\gamehacking\kernel-game\x64\Release\kernel-game\kernel-game.cat
+  
