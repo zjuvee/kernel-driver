@@ -1,0 +1,9 @@
+﻿  main.cpp
+  Generating code
+  1 of 39 functions ( 2.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  user-mode.vcxproj -> D:\Repos\gamehacking\kernel-driver\x64\Release\user-mode.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
