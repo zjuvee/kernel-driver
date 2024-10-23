@@ -11,7 +11,7 @@ constexpr ULONG read_code = CTL_CODE(FILE_DEVICE_UNKNOWN, 0x776, METHOD_BUFFERED
 constexpr ULONG write_code = CTL_CODE(FILE_DEVICE_UNKNOWN, 0x777, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
 
 struct info_t {
-	HANDLE target_pid = 0;
+	ULONG target_pid = 0;
 	void* target_address = 0x0;
 	void* buffer_address = 0x0;
 	SIZE_T size = 0;
@@ -32,9 +32,10 @@ NTSTATUS ctl_io(PDEVICE_OBJECT device_obj, PIRP irp) {
 			const auto ctl_code = stack->Parameters.DeviceIoControl.IoControlCode;
 
 			if (ctl_code == init_code) {
-				PsLookupProcessByProcessId(buffer->target_pid, &s_target_process);
+				PsLookupProcessByProcessId((HANDLE)buffer->target_pid, &s_target_process);
 			}
 			else if (ctl_code == read_code) {
+				DbgPrintEx(0, 0, "received PID: %lu, address: %p, size: %llu", buffer->target_pid, buffer->target_address, buffer->size);
 				SIZE_T bytesRead = 0;
 				NTSTATUS status = ReadProcessMemory((int)buffer->target_pid,
 					buffer->target_address,
@@ -52,7 +53,7 @@ NTSTATUS ctl_io(PDEVICE_OBJECT device_obj, PIRP irp) {
 					buffer->size,
 					&bytesWritten);
 				buffer->return_size = bytesWritten;
-				return status;		
+				return status;
 			}
 		}
 	}
@@ -118,6 +119,8 @@ extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT driver_obj, PUNICODE_STRING regis
 	UNICODE_STRING  drv_name;
 	RtlInitUnicodeString(&drv_name, L"\\Driver\\amogus");
 	IoCreateDriver(&drv_name, &real_main);
+
+	DbgPrintEx(0, 0, "driver loaded sucesfully");
 
 	return STATUS_SUCCESS;
 }

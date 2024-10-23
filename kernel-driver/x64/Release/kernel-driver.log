@@ -1,47 +1,28 @@
 ﻿  Building 'kernel-driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
   Stamping x64\Release\kernel-driver.inf
-  Stamping [Version] section with DriverVer=10/21/2024,5.19.28.827
-  memory.c
+  Stamping [Version] section with DriverVer=10/23/2024,17.5.16.82
+  driver.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime.h(61,26): warning C4083: expected ')'; found identifier '_VCRUNTIME_DISABLED_WARNINGS'
-  (compiling source file 'memory.c')
+  (compiling source file 'driver.cpp')
   
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime.h(111,9): warning C4005: '_CRT_STRINGIZE': macro redefinition
-  (compiling source file 'memory.c')
+  (compiling source file 'driver.cpp')
       C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\crt\crtdefs.h(85,9):
       see previous definition of '_CRT_STRINGIZE'
   
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime.h(114,9): warning C4005: '_CRT_WIDE': macro redefinition
-  (compiling source file 'memory.c')
+  (compiling source file 'driver.cpp')
       C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\crt\crtdefs.h(88,9):
       see previous definition of '_CRT_WIDE'
   
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime.h(155,9): warning C4005: '__CRTDECL': macro redefinition
-  (compiling source file 'memory.c')
+  (compiling source file 'driver.cpp')
       C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\crt\crtdefs.h(640,9):
       see previous definition of '__CRTDECL'
   
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\stdint.h(16,26): warning C4083: expected ')'; found identifier '_VCRUNTIME_DISABLED_WARNINGS'
-  (compiling source file 'memory.c')
+  (compiling source file 'driver.cpp')
   
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(5,1): warning C4131: 'ReadPhysicalAddress': uses old-style declarator
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(5,50): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(63,16): warning C4047: 'return': 'PVOID' differs in levels of indirection from 'NTSTATUS'
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(65,46): warning C4022: 'PsLookupProcessByProcessId': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(66,31): warning C4047: 'return': 'PVOID' differs in levels of indirection from 'NTSTATUS'
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(145,30): warning C4022: 'WritePhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(148,10): warning C4142: 'ReadPhysicalAddress': benign redefinition of type
-      D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(5,1):
-      see declaration of 'ReadPhysicalAddress'
-  
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(151,38): warning C4047: '=': 'LONGLONG' differs in levels of indirection from 'PVOID'
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(162,23): warning C4047: '=': 'LONGLONG' differs in levels of indirection from 'PVOID'
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(190,41): warning C4022: 'ReadPhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(195,37): warning C4022: 'ReadPhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(204,36): warning C4022: 'ReadPhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(213,40): warning C4022: 'ReadPhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(242,31): warning C4022: 'ReadPhysicalAddress': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(257,46): warning C4022: 'PsLookupProcessByProcessId': pointer mismatch for actual parameter 1
-D:\Repos\gamehacking\kernel-driver\kernel-driver\memory.c(271,32): warning C4022: 'WritePhysicalAddress': pointer mismatch for actual parameter 1
   kernel-driver.vcxproj -> D:\Repos\gamehacking\kernel-driver\x64\Release\kernel-driver.sys
   Done Adding Additional Store
   Successfully signed: D:\Repos\gamehacking\kernel-driver\x64\Release\kernel-driver.sys

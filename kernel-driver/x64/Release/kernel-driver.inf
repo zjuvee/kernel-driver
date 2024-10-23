@@ -8,7 +8,7 @@ Class       = System ; TODO: specify appropriate Class
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
 Provider    = %ManufacturerName%
 CatalogFile = kernel-driver.cat
-DriverVer = 10/21/2024,5.19.28.827
+DriverVer = 10/23/2024,17.5.16.82
 PnpLockdown = 1
 
 [DestinationDirs]
